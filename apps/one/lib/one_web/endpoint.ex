@@ -38,6 +38,7 @@ defmodule OneWeb.Endpoint do
     key: "_one_key",
     signing_salt: "kMQgEIr8"
 
+  use Appsignal.Phoenix
   plug OneWeb.Router
 
   @doc """

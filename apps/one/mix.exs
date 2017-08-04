@@ -23,7 +23,7 @@ defmodule One.Mixfile do
   def application do
     [
       mod: {One.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :appsignal]
     ]
   end
 
