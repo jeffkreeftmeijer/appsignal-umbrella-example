@@ -38,6 +38,7 @@ defmodule TwoWeb.Endpoint do
     key: "_two_key",
     signing_salt: "XLRmJlz3"
 
+  use Appsignal.Phoenix
   plug TwoWeb.Router
 
   @doc """
