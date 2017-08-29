@@ -23,7 +23,7 @@ defmodule Two.Mixfile do
   def application do
     [
       mod: {Two.Application, []},
-      extra_applications: [:logger, :runtime_tools, :appsignal]
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
