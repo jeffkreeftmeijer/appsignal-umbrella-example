@@ -16,4 +16,5 @@ config :backend, Backend.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  port: "5432"
+  port: "5432",
+  loggers: [Appsignal.Ecto, Ecto.LogEntry]
