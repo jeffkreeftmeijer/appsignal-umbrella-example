@@ -3,6 +3,7 @@ defmodule Backend.Application do
   # for more information on OTP Applications
   @moduledoc false
 
+  import Supervisor.Spec, warn: false
   use Application
 
   def start(_type, _args) do
@@ -10,6 +11,7 @@ defmodule Backend.Application do
     children = [
       # Starts a worker by calling: Backend.Worker.start_link(arg)
       # {Backend.Worker, arg},
+      supervisor(Backend.Repo, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

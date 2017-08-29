@@ -1,18 +1,6 @@
 defmodule Backend do
-  @moduledoc """
-  Documentation for Backend.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Backend.hello
-      :world
-
-  """
-  def hello do
-    :world
+  alias Backend.{Repo,User}
+  def users do
+    Repo.all(User)
   end
 end
