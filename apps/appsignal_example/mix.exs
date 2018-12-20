@@ -23,7 +23,7 @@ defmodule AppsignalExample.MixProject do
   def application do
     [
       mod: {AppsignalExample.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :appsignal]
     ]
   end
 

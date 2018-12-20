@@ -14,7 +14,8 @@ config :appsignal_example_web, AppsignalExampleWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "bldfH9FDmH3DCs8BV4dhHJMBAdXaR5D2MW4HVOgKgMz4Oj/tonCxqFRuiB+sshod",
   render_errors: [view: AppsignalExampleWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: AppsignalExampleWeb.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: AppsignalExampleWeb.PubSub, adapter: Phoenix.PubSub.PG2],
+  instrumenters: [Appsignal.Phoenix.Instrumenter]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

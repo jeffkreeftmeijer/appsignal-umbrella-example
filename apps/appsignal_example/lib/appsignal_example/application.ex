@@ -10,6 +10,14 @@ defmodule AppsignalExample.Application do
       AppsignalExample.Repo
     ]
 
+    Telemetry.attach(
+      "appsignal-ecto",
+      [:appsignal_example, :repo, :query],
+      Appsignal.Ecto,
+      :handle_event,
+      nil
+    )
+
     Supervisor.start_link(children, strategy: :one_for_one, name: AppsignalExample.Supervisor)
   end
 end
