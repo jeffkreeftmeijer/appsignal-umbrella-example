@@ -1,10 +1,10 @@
-defmodule AppsignalExample.AccountsTest do
-  use AppsignalExample.DataCase
+defmodule Repo.AccountsTest do
+  use Repo.DataCase
 
-  alias AppsignalExample.Accounts
+  alias Repo.Accounts
 
   describe "users" do
-    alias AppsignalExample.Accounts.User
+    alias Repo.Accounts.User
 
     @valid_attrs %{email: "some email", name: "some name"}
     @update_attrs %{email: "some updated email", name: "some updated name"}

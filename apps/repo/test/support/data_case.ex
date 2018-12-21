@@ -1,4 +1,4 @@
-defmodule AppsignalExample.DataCase do
+defmodule Repo.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule AppsignalExample.DataCase do
 
   using do
     quote do
-      alias AppsignalExample.Repo
+      alias Repo.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import AppsignalExample.DataCase
+      import Repo.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(AppsignalExample.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Repo.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(AppsignalExample.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Repo.Repo, {:shared, self()})
     end
 
     :ok

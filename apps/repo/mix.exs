@@ -1,9 +1,9 @@
-defmodule AppsignalExample.MixProject do
+defmodule Repo.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :appsignal_example,
+      app: :repo,
       version: "0.1.0",
       build_path: "../../_build",
       config_path: "../../config/config.exs",
@@ -22,7 +22,7 @@ defmodule AppsignalExample.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {AppsignalExample.Application, []},
+      mod: {Repo.Application, []},
       extra_applications: [:logger, :runtime_tools, :appsignal]
     ]
   end

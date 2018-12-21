@@ -1,13 +1,13 @@
 # Since configuration is shared in umbrella projects, this file
-# should only configure the :appsignal_example application itself
+# should only configure the :repo application itself
 # and only for organization purposes. All other config goes to
 # the umbrella root.
 use Mix.Config
 
 # Configure your database
-config :appsignal_example, AppsignalExample.Repo,
+config :repo, Repo.Repo,
   username: "postgres",
   password: "postgres",
-  database: "appsignal_example_dev",
+  database: "appsignal_example_test",
   hostname: "localhost",
-  pool_size: 10
+  pool: Ecto.Adapters.SQL.Sandbox

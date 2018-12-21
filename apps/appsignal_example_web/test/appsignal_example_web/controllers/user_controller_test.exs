@@ -1,7 +1,7 @@
 defmodule AppsignalExampleWeb.UserControllerTest do
   use AppsignalExampleWeb.ConnCase
 
-  alias AppsignalExample.Accounts
+  alias Repo.Accounts
 
   @create_attrs %{email: "some email", name: "some name"}
   @update_attrs %{email: "some updated email", name: "some updated name"}

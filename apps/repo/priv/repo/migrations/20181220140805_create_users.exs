@@ -1,4 +1,4 @@
-defmodule AppsignalExample.Repo.Migrations.CreateUsers do
+defmodule Repo.Repo.Migrations.CreateUsers do
   use Ecto.Migration
 
   def change do

@@ -1,4 +1,4 @@
-defmodule AppsignalExample.Application do
+defmodule Repo.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -7,17 +7,17 @@ defmodule AppsignalExample.Application do
 
   def start(_type, _args) do
     children = [
-      AppsignalExample.Repo
+      Repo.Repo
     ]
 
     Telemetry.attach(
       "appsignal-ecto",
-      [:appsignal_example, :repo, :query],
+      [:repo, :repo, :query],
       Appsignal.Ecto,
       :handle_event,
       nil
     )
 
-    Supervisor.start_link(children, strategy: :one_for_one, name: AppsignalExample.Supervisor)
+    Supervisor.start_link(children, strategy: :one_for_one, name: Repo.Supervisor)
   end
 end

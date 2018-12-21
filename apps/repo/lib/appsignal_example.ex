@@ -1,6 +1,6 @@
-defmodule AppsignalExample do
+defmodule Repo do
   @moduledoc """
-  AppsignalExample keeps the contexts that define your domain
+  Repo keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

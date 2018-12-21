@@ -1,12 +1,12 @@
-defmodule AppsignalExample.Accounts do
+defmodule Repo.Accounts do
   @moduledoc """
   The Accounts context.
   """
 
   import Ecto.Query, warn: false
-  alias AppsignalExample.Repo
+  # alias Repo.Repo
 
-  alias AppsignalExample.Accounts.User
+  alias Repo.Accounts.User
 
   @doc """
   Returns the list of users.
@@ -18,7 +18,7 @@ defmodule AppsignalExample.Accounts do
 
   """
   def list_users do
-    Repo.all(User)
+    Repo.Repo.all(User)
   end
 
   @doc """
@@ -35,7 +35,7 @@ defmodule AppsignalExample.Accounts do
       ** (Ecto.NoResultsError)
 
   """
-  def get_user!(id), do: Repo.get!(User, id)
+  def get_user!(id), do: Repo.Repo.get!(User, id)
 
   @doc """
   Creates a user.
@@ -52,7 +52,7 @@ defmodule AppsignalExample.Accounts do
   def create_user(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)
-    |> Repo.insert()
+    |> Repo.Repo.insert()
   end
 
   @doc """
@@ -70,7 +70,7 @@ defmodule AppsignalExample.Accounts do
   def update_user(%User{} = user, attrs) do
     user
     |> User.changeset(attrs)
-    |> Repo.update()
+    |> Repo.Repo.update()
   end
 
   @doc """
@@ -86,7 +86,7 @@ defmodule AppsignalExample.Accounts do
 
   """
   def delete_user(%User{} = user) do
-    Repo.delete(user)
+    Repo.Repo.delete(user)
   end
 
   @doc """
