@@ -1,7 +1,7 @@
 defmodule AppsignalExampleWeb.UserController do
   use AppsignalExampleWeb, :controller
 
-  alias AppsignalExample.Accounts
+  alias Core.Accounts
   alias AppsignalExample.Accounts.User
 
   def index(conn, _params) do

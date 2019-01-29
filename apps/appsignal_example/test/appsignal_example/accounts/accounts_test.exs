@@ -1,7 +1,7 @@
 defmodule AppsignalExample.AccountsTest do
   use AppsignalExample.DataCase
 
-  alias AppsignalExample.Accounts
+  alias Core.Accounts
 
   describe "users" do
     alias AppsignalExample.Accounts.User

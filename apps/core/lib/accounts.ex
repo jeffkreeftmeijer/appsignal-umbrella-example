@@ -1,4 +1,4 @@
-defmodule AppsignalExample.Accounts do
+defmodule Core.Accounts do
   @moduledoc """
   The Accounts context.
   """
