@@ -37,7 +37,8 @@ defmodule AppsignalExample.MixProject do
   defp deps do
     [
       {:ecto_sql, "~> 3.0"},
-      {:postgrex, ">= 0.0.0"}
+      {:postgrex, ">= 0.0.0"},
+      {:appsignal, "~> 1.0"}
     ]
   end
 
